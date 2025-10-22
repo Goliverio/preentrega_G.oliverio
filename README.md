@@ -33,7 +33,6 @@ preentrega_G.oliverio/
             ├── Objects # Carpeta contenedora del archivo Register con datos necesarios para realizar los test.
             └── baseActions  # Carpeta contenderod de distintas funciones reutilizables      
         ├── conftest.py # Configuraciones adicionales para pytest 
-        ├── helpers.py  # Funciones auxiliares reutilizables
         ├── run_test.py # Aplicacion para la ejecucion de todos los tests
         ├── pytest.ini  # Archvivo configuracion pytest
         ├── Requirements.txt # Requerimientos para ejecutar los tests
@@ -110,7 +109,7 @@ No es necesario instalar los test. Solo crea una carpeta, descarga los archivos 
 ```
 
 ## 📷 Screenshot de logs
- ![Texto alternativo](images/Capura-runtest.png)
+ ![Texto alternativo](images/capura-runtest.png)
 
 ## 👤 Autor
 ## Gonzalo Oliverio
