@@ -77,7 +77,7 @@ El reporte se genera automaticamente. Se puede cancelar esta opcion desde pytest
 
 4. Navegar al carrito
 
-5. Comprobar que el producto añadido aparezca correctamente
+5. Comprobar que el producto añadido aparezca correctamente en el carrito de compras
 
 ### ✨ Características Adicionales
 
