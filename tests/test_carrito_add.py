@@ -3,12 +3,12 @@ from tests.objects.register import Register
 
 
 def test_carrito(driver):
+    """Caso de prueba: Verificar que el contador el carrito se incremente al
+    agregar un producto. Navegar el carrito y verificar que el producto
+    agregado sea el correcto"""
     try:
         usuario = AccionesUsuario(driver)
-        usuario.abrir_web(driver)
-        usuario.validar_usuario()
-        usuario.usuario_logged()
-
+        usuario.loguear_usuario(driver)
 
         productos = driver.find_elements(*Register.inventory_item)
 

@@ -1,13 +1,13 @@
 from tests.baseActions.usuario_acciones import AccionesUsuario
 import time
 
-def test_loging(driver):
+def test_login(driver):
+    """Caso de prueba: Login exitoso con credenciales válidas.
+    Verífica que el usuario pueda iniciar sesión y sea redirigido a la página de inventario.
+    """
     try:
         usuario = AccionesUsuario(driver)
-        usuario.abrir_web(driver)
-        usuario.validar_usuario()
-        assert "/inventory.html" in driver.current_url, "No se redirigió al inventario"
-        print("Ingresamos correctamente!!")
+        usuario.loguear_usuario(driver)
         print("Podemos ver /inventory.html")
         time.sleep(4)
 
@@ -15,5 +15,4 @@ def test_loging(driver):
         print(f"Error en test_login: {e}")
         raise
     finally:
-        
-        driver.quit()          # si esto se cierra me cierra el driver para siempre?
+        driver.quit()

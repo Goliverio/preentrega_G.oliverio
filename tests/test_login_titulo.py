@@ -1,13 +1,13 @@
-from tests.baseActions.usuario_acciones import AccionesUsuario
+from tests.objects.register import Register
 import time
 
-
 def test_titulo(driver):
+    """Caso de prueba: Verificar el título de la página de inicio sea correcto
+    No es necesario loguear al usuario."""
     try:
-        usuario = AccionesUsuario(driver)
-        usuario.abrir_web(driver)
+        driver.get(Register.url_web)  # SOLO ABRIMOS LA WEB
 
-        assert driver.title == "Swag Labs"
+        assert driver.title   == "Swag Labs"       #Comprobamos el título de la página.
         print("Titulo es correcto:", driver.title)
         time.sleep(2)
 

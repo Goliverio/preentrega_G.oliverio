@@ -16,7 +16,6 @@ class AccionesBase:
         try:
             WebDriverWait(self.driver, timeout).until(
                 EC.presence_of_all_elements_located(by_locator)
-
             )
             return self.driver.find_element(*by_locator)
 
@@ -55,14 +54,10 @@ class AccionesBase:
             raise Exception("No es accesible")
 
 
-######### PRUEBA
-
-
     def ver_elemento(self, by_locator, timeout=2):
         try:
             WebDriverWait(self.driver, timeout).until(
                 EC.presence_of_all_elements_located(by_locator)
-
             )
             return self.driver.find_element(*by_locator)
 

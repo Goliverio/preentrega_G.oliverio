@@ -27,21 +27,27 @@ class AccionesUsuario(AccionesBase):
         print("Ya escribimos usuario y pass. Ahora seguimos con el click para ingresar")
         self.click_para_ingresar()
 
-
-    @staticmethod
-    def abrir_web(driver):
-        usuario = AccionesUsuario(driver)
-        usuario.load(Register.url_web)
+    def abrir_web(self):
+        self.load(Register.url_web)
         print("Cargamos la web")
 
-########## orueba prar carrito
-    #@staticmethod
-    def ver_productos(self):
-#        productos = self.ver_elemento(Register.inventory_item)
-#        productos = se.find_elements(Register.inventory_item)
-        print(self.ver_elemento(Register.inventory_item))
+    def loguear_usuario(self, driver):
+        try:
+            self.abrir_web()
+            self.validar_usuario()
 
-      #  return productos
+            assert "/inventory.html" in driver.current_url, "No se redirigió al inventario"
+            print("Login exitoso y validado correctamente!")
+
+        except Exception as e:
+            print(f"Error en Test_login: {e} \n")
+            raise   RuntimeError("No se pudo cargar el inventario") from e
+        finally:
+            pass
+#            driver.quit()
+
+
+
 
 
 
