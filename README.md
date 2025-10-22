@@ -1,5 +1,5 @@
 
-# Pre-entrega Proyecto Final - Automatización de Testing
+# Preentrega Proyecto Final - Automatización de Testing
 
 Proyecto de automatización de pruebas para el sitio SauceDemo, utilizando Selenium WebDriver y Python.
 
