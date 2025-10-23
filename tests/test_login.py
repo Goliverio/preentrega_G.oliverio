@@ -8,8 +8,8 @@ def test_login(driver):
     try:
         usuario = AccionesUsuario(driver)
         usuario.loguear_usuario(driver)
+        assert "/inventory.html" in driver.current_url, "No fue redirigido a inventory.html"
         print("Podemos ver /inventory.html")
-        time.sleep(4)
 
     except Exception as e:
         print(f"Error en test_login: {e}")
