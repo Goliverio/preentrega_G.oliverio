@@ -17,7 +17,7 @@ def test_carrito_contador(driver):
 
 #   Verificamos que el contador del carrito refleje el producto agregado.
         badge = driver.find_element(*Register.carrito_icono).text
-        assert badge == '1'
+        assert badge == '1' , "No se incrementa el contador del carrito"
         print(f"En el carrito hay {badge} producto")
 
     except Exception as e:

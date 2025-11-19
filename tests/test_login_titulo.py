@@ -7,7 +7,7 @@ def test_titulo(driver):
     try:
         driver.get(Register.url_web)  # SOLO ABRIMOS LA WEB
 
-        assert driver.title   == "Swag Labs"       #Comprobamos el título de la página.
+        assert driver.title   == Register.pagina_titulo      #Comprobamos el título de la página.
         print("Titulo es correcto:", driver.title)
         time.sleep(2)
 

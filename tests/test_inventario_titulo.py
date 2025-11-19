@@ -2,11 +2,9 @@ from tests.baseActions.usuario_acciones import AccionesUsuario
 from tests.objects.register import Register
 
 
-
 def test_inventario_titulo(driver):
     """   Caso de prueba: Verífica que el título de la página sea correcto
     """
-
     try:
         usuario = AccionesUsuario(driver)
         usuario.loguear_usuario(driver)

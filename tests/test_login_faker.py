@@ -1,12 +1,20 @@
 from tests.baseActions.usuario_acciones import AccionesUsuario
 import pytest
-from tests.baseActions.acciones_base import leer_csv_login
 from tests.objects.register import Register
+from faker import Faker
 
 
-@pytest.mark.parametrize("nom_u, pass_u,debe_funcionar",leer_csv_login(Register.archivo_usuarios))
-def test_login(nom_u, pass_u, debe_funcionar, driver):
-    """Caso de Prueba: Testeo de login de usuarios."""
+#inicializamos faker
+
+faker =Faker()
+
+@pytest.mark.parametrize("nom_u, pass_u,debe_funcionar",[
+    (faker.user_name(), faker.password(), False),
+    (faker.user_name(), faker.password(), False),
+])
+
+def test_login_faker(nom_u, pass_u, debe_funcionar, driver):
+    """Caso de Prueba: Testeo de login de usuarios con credenciales inválidas."""
     usuario = AccionesUsuario(driver)
     Register.user_name = nom_u
     Register.password = pass_u

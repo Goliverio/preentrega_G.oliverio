@@ -1,6 +1,9 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+import csv
+import pathlib
+
 
 
 class AccionesBase:
@@ -64,3 +67,49 @@ class AccionesBase:
         except TimeoutException:
             print("No se encontró el elemento")
             return None
+
+    def obtener_error_login(self, by_locator):
+        try:
+            WebDriverWait(self.driver, 10).until(
+                EC.presence_of_all_elements_located(by_locator)
+            )
+            elemento = self.driver.find_element(*by_locator)
+            return elemento.text
+        except TimeoutException:
+            print("No se encontró el elemento. Pero para nada, nada!")
+            return None
+
+
+#
+# Lee el archivo CVS con la lista de usuario
+#
+def leer_csv_login(ruta_archivo):
+    """Lee el archivo CVS y devuelve los datos de cada usuario para tester
+
+    Usage: leer_csv_login('Ruta_del_archivo')"""
+
+    ruta = pathlib.Path(ruta_archivo)
+    datos = []
+    with open(ruta,newline='',encoding="utf-8") as archivo:
+        lector = csv.DictReader(archivo)
+
+        for fila in lector:
+            debe_funcionar = fila["debe_funcionar"].lower() == "true"
+            datos.append((fila["usuario"], fila["password"], debe_funcionar))
+    return datos
+
+#
+# Devuelve la lista completa de usuarios
+#
+"""
+def lista_completa(lista_de_usuarios):
+#    "/"" SOLO VERIFICA QUE SE LEA BIEN LA LISTA DE USUARIOS
+
+#        Usage: lista_completa('')""/"
+    la_lista = lista_de_usuarios
+    print(type(la_lista))
+    print(la_lista)
+    return la_lista
+    #print(lista_de_usuarios)
+
+"""
