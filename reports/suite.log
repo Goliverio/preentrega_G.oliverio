@@ -1,0 +1,111 @@
+2025-12-04 12:02:46 INFO msg | test_login : --------------------------------------------
+2025-12-04 12:02:46 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:47 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:47 INFO msg | test_login : Podemos ver /inventory.html
+2025-12-04 12:02:47 INFO msg | test_login : --------------------------------------------
+2025-12-04 12:02:47 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:47 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:47 INFO msg | test_login : Epic sadface: Username and password do not match any user in this service
+2025-12-04 12:02:47 INFO msg | test_login : --------------------------------------------
+2025-12-04 12:02:47 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:48 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:48 INFO msg | test_login : Podemos ver /inventory.html
+2025-12-04 12:02:48 INFO msg | test_titulo : --------------------------------------------
+2025-12-04 12:02:48 INFO msg | test_titulo : ABRIMOS LA WEB:  https://www.saucedemo.com
+2025-12-04 12:02:48 INFO msg | test_titulo : COMPROBANDO QUE EL TITULO SEA Swag Labs
+2025-12-04 12:02:48 INFO msg | test_titulo : Titulo es correcto: Swag Labs
+2025-12-04 12:02:48 INFO msg | test_lista_completa : --------------------------------------------
+2025-12-04 12:02:48 INFO msg | test_inventario_navegacion : --------------------------------------------
+2025-12-04 12:02:48 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:48 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:48 INFO msg | test_inventario_navegacion : Se encontraron 6 productos.
+2025-12-04 12:02:48 INFO msg | test_inventario_navegacion : Primer producto: Sauce Labs Backpack. Precio: $3.87
+2025-12-04 12:02:48 INFO msg | test_inventario_navegacion : Se expande el menu principal
+2025-12-04 12:02:48 INFO msg | test_inventario_navegacion : Existen filtros para el listado de productos
+2025-12-04 12:02:48 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:49 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:49 INFO msg | test_inventario_titulo : --------------------------------------------
+2025-12-04 12:02:49 INFO msg | test_inventario_titulo : Titulo de sección OK:  Products
+2025-12-04 12:02:49 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:49 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:49 INFO msg | test_carrito_contador : --------------------------------------------
+2025-12-04 12:02:49 INFO msg | test_carrito_contador : Se encontraron 6 productos.
+2025-12-04 12:02:49 INFO msg | test_carrito_contador : AGREGANDO EL PRIMER PRODUCTO ENCONTRADO
+2025-12-04 12:02:49 INFO msg | test_carrito_contador : VERIFICANDO QUE EL CONTADOR SUME EL PRODUCTO AGREGADO
+2025-12-04 12:02:49 INFO msg | test_carrito_contador : En el carrito hay 1 producto
+2025-12-04 12:02:50 INFO msg | test_carrito : hicimos el logout para limpiar la sesión
+2025-12-04 12:02:50 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:50 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:50 INFO msg | test_carrito : --------------------------------------------
+2025-12-04 12:02:50 INFO msg | test_carrito : Se encontraron 6 productos
+2025-12-04 12:02:50 INFO msg | agregar_producto_por_nombre : Agregando al carrito a:
+2025-12-04 12:02:50 INFO msg | agregar_producto_por_nombre : Test.allTheThings() T-Shirt (Red) 
+2025-12-04 12:02:50 INFO msg | test_carrito : COMPROBANDO El CONTADOR DEL CARRITO
+2025-12-04 12:02:50 INFO msg | test_carrito : El carrito tiene 1 items. se actualizo correctamente!
+2025-12-04 12:02:50 INFO msg | test_carrito : VERIFICANDO QUE LOS DATOS DEL CARRITO SEAN CORRECTOS
+2025-12-04 12:02:50 INFO msg | test_carrito : Test.allTheThings() T-Shirt (Red)
+2025-12-04 12:02:50 INFO msg | test_carrito : Test.allTheThings() T-Shirt (Red)
+2025-12-04 12:02:50 INFO msg | test_carrito : Se agrego correctamente  Test.allTheThings() T-Shirt (Red)
+2025-12-04 12:02:51 INFO msg | test_carrito_json : --------------------------------------------
+2025-12-04 12:02:51 INFO msg | test_carrito_json : Prueba para el producto Sauce Labs Backpack
+2025-12-04 12:02:51 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:51 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:52 INFO msg | agregar_producto_por_nombre : Agregando al carrito a:
+2025-12-04 12:02:52 INFO msg | agregar_producto_por_nombre : Sauce Labs Backpack 
+2025-12-04 12:02:52 INFO msg | test_carrito_json : Se agrego correctamente el producto
+2025-12-04 12:02:53 INFO msg | test_carrito_json : --------------------------------------------
+2025-12-04 12:02:53 INFO msg | test_carrito_json : Prueba para el producto Sauce Labs Bike Light
+2025-12-04 12:02:53 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:53 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:53 INFO msg | agregar_producto_por_nombre : Agregando al carrito a:
+2025-12-04 12:02:53 INFO msg | agregar_producto_por_nombre : Sauce Labs Bike Light 
+2025-12-04 12:02:53 INFO msg | test_carrito_json : Se agrego correctamente el producto
+2025-12-04 12:02:54 INFO msg | test_carrito_json : --------------------------------------------
+2025-12-04 12:02:54 INFO msg | test_carrito_json : Prueba para el producto Sauce Labs Bolt T-Shirt
+2025-12-04 12:02:54 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:54 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:54 INFO msg | agregar_producto_por_nombre : Agregando al carrito a:
+2025-12-04 12:02:54 INFO msg | agregar_producto_por_nombre : Sauce Labs Bolt T-Shirt 
+2025-12-04 12:02:54 INFO msg | test_carrito_json : Se agrego correctamente el producto
+2025-12-04 12:02:55 INFO msg | test_login_faker : --------------------------------------------
+2025-12-04 12:02:55 INFO msg | test_login_faker : [kennethgoodwin - !v&7FIKq)R]
+2025-12-04 12:02:55 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:55 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:56 INFO msg | test_login_faker : Epic sadface: Username and password do not match any user in this service
+2025-12-04 12:02:56 INFO msg | test_login_faker : --------------------------------------------
+2025-12-04 12:02:56 INFO msg | test_login_faker : [chaseparker - )wY3AXNd5Y]
+2025-12-04 12:02:56 INFO msg | abrir_web : Cargando la WEB
+2025-12-04 12:02:56 INFO msg | validar_usuario : Validando usuario
+2025-12-04 12:02:56 INFO msg | test_login_faker : Epic sadface: Username and password do not match any user in this service
+2025-12-04 12:02:56 INFO msg | test_delete : --------------------------------------------
+2025-12-04 12:02:56 INFO msg | test_delete : BORRANDO EL USUARIO
+2025-12-04 12:02:57 INFO msg | test_delete : OBTENIENDO RESPUESTA DEL SERVIDOR
+2025-12-04 12:02:57 INFO msg | test_delete : Status Code:  204. Eliminado correctamente
+2025-12-04 12:02:57 INFO msg | test_delete : COMPROBANDO TIEMPO DE RESPUESTA
+2025-12-04 12:02:57 INFO msg | test_delete : El tiempo de respuesta fue 0
+2025-12-04 12:02:57 INFO msg | test_get_users : --------------------------------------------
+2025-12-04 12:02:57 INFO msg | test_get_users : OBTENIENDO RESPUESTA DEL SERVIDOR
+2025-12-04 12:02:57 INFO msg | test_get_users : Status Code:  200
+2025-12-04 12:02:57 INFO msg | test_get_users : VERIFICANDO QUE LA CLAVE 'DATA' ESTA PRESENTE
+2025-12-04 12:02:57 INFO msg | test_get_users : Clave 2 se encontro
+2025-12-04 12:02:57 INFO msg | test_get_users : VERIFICANDO SI HAY USUARIOS EN LA LISTA
+2025-12-04 12:02:57 INFO msg | test_get_users : Se encontraron 5 usuarios
+2025-12-04 12:02:57 INFO msg | test_patch_users : --------------------------------------------
+2025-12-04 12:02:57 INFO msg | test_patch_users : OBTENIENDO RESPUESTA DEL SERVIDOR
+2025-12-04 12:02:57 INFO msg | test_patch_users : Status Code:  200
+2025-12-04 12:02:57 INFO msg | test_patch_users : VERIFICANDO LA ACTUALIZACIÓN DE DATOS
+2025-12-04 12:02:57 INFO msg | test_patch_users : Datos actualizados
+2025-12-04 12:02:57 INFO msg | test_post_users : --------------------------------------------
+2025-12-04 12:02:57 INFO msg | test_post_users : VERIFICANDO QUE EL RECURSO SE HAYA CREADO
+2025-12-04 12:02:57 INFO msg | test_post_users : Status Code:  201
+2025-12-04 12:02:57 INFO msg | test_post_users : VERIFICANDO EL NOMBRE DE LA RESPUESTA CON EL ENVIADO
+2025-12-04 12:02:57 INFO msg | test_post_users : Datos correctos
+2025-12-04 12:02:57 INFO msg | test_post_users : VERIFICANDO QUE QUE LA RESPUESTA TENGA UN ID
+2025-12-04 12:02:57 INFO msg | test_post_users : El ID es correcto
+2025-12-04 12:02:58 INFO msg | test_put_users : --------------------------------------------
+2025-12-04 12:02:58 INFO msg | test_put_users : OBTENIENDO RESPUESTA DEL SERVIDOR
+2025-12-04 12:02:58 INFO msg | test_put_users : Status Code:  200
+2025-12-04 12:02:58 INFO msg | test_put_users : VERIFICANDO EL TIEMPO DE RESPUESTA
+2025-12-04 12:02:58 INFO msg | test_put_users : Tiempo de respuesta:  0
+2025-12-04 12:02:58 INFO msg | test_put_users : VALIDANDO ESTADO DE LOS DATOS
+2025-12-04 12:02:58 INFO msg | test_put_users : Registro guardado correctamente

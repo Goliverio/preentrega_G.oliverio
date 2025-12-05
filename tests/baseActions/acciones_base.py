@@ -3,6 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import csv
 import pathlib
+from utils.logger import logger
 
 
 
@@ -23,7 +24,7 @@ class AccionesBase:
             return self.driver.find_element(*by_locator)
 
         except TimeoutException:
-            print("No se encontró el elemento")
+            logger.info("No se encontró el elemento")
             return None
 
     def click_elemento(self, by_locator):
@@ -65,7 +66,7 @@ class AccionesBase:
             return self.driver.find_element(*by_locator)
 
         except TimeoutException:
-            print("No se encontró el elemento")
+            logger.info("No se encontró el elemento")
             return None
 
     def obtener_error_login(self, by_locator):
@@ -76,7 +77,7 @@ class AccionesBase:
             elemento = self.driver.find_element(*by_locator)
             return elemento.text
         except TimeoutException:
-            print("No se encontró el elemento. Pero para nada, nada!")
+            logger.info("No se encontró el elemento. Pero para nada, nada!")
             return None
 
 
@@ -97,19 +98,3 @@ def leer_csv_login(ruta_archivo):
             debe_funcionar = fila["debe_funcionar"].lower() == "true"
             datos.append((fila["usuario"], fila["password"], debe_funcionar))
     return datos
-
-#
-# Devuelve la lista completa de usuarios
-#
-"""
-def lista_completa(lista_de_usuarios):
-#    "/"" SOLO VERIFICA QUE SE LEA BIEN LA LISTA DE USUARIOS
-
-#        Usage: lista_completa('')""/"
-    la_lista = lista_de_usuarios
-    print(type(la_lista))
-    print(la_lista)
-    return la_lista
-    #print(lista_de_usuarios)
-
-"""

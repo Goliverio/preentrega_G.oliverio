@@ -1,25 +1,25 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-from tests.objects.register import Register
-
+import time
 
 
 class CartPage:
-    def __init__(self, driver, ):
+    # Selectores
+    _CART_ITEMS = (By.CLASS_NAME, "cart_item")
+    _CART_ITEM_NAME = (By.CLASS_NAME, "inventory_item_name")
+
+    def __init__(self, driver):
         self.driver = driver
-        self.Register = Register
         self.wait = WebDriverWait(driver, 10)
 
-    def obtener_nombre_carrito(self):
-        productos = self.wait.until(EC.visibility_of_all_elements_located(self.Register.inventory_item))
-    #    productos = WebDriverWait(self.driver, 10).until(EC.presence_of_all_elements_located(by_locator)
-        return  productos
+    def obtener_productos_carrito(self):
+        productos = self.wait.until(EC.visibility_of_all_elements_located(*self._CART_ITEMS))
+        return productos
 
-    def algo(self):
-        pass
-
+    def obtener_nombre_producto_carrito(self):
+        nombre_producto = self.wait.until(EC.visibility_of_element_located(self._CART_ITEM_NAME))
+        return nombre_producto.text
 
 
 

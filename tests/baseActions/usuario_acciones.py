@@ -1,5 +1,7 @@
 from tests.baseActions.acciones_base import AccionesBase
 from tests.objects.register import Register
+from utils.logger import logger
+
 
 class AccionesUsuario(AccionesBase):
 
@@ -21,19 +23,30 @@ class AccionesUsuario(AccionesBase):
     def validar_usuario(self):
         self.escribir_user(Register.user_name)
         self.escribir_pass(Register.password)
-        print("Ya escribimos usuario y pass. Ahora seguimos con el click para ingresar")
+        logger.info(f"Validando usuario")
         self.click_para_ingresar()
 
     def abrir_web(self):
         self.load(Register.url_web)
-        print("Cargamos la web")
+        logger.info("Cargando la WEB")
 
     def loguear_usuario(self, driver):
         try:
             self.abrir_web()
             self.validar_usuario()
         except Exception as e:
-            print(f"Error en Test_login: {e} \n")
-            raise   RuntimeError("No se pudo cargar el inventario") from e
+            logger.error(f"Error en login: {e} \n")
+            raise   RuntimeError("No se pudo loguear al usuario") from e
+        finally:
+            pass
+
+    def logout_user(self):
+        try:
+            #self._esperar_por_elemento(Register.carrito_menu)
+            self.ver_elemento(Register.inventory_menu)
+            self.click_elemento(Register.logout_page)
+        except Exception as e:
+            logger.error(f"No se puede hacer el logout {e}")
+            raise RuntimeError("No se puede hacer el logout") from e
         finally:
             pass

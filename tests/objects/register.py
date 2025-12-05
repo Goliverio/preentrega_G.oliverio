@@ -12,6 +12,7 @@ class Register:
     registerButton = (By.ID, "login-button")
     userRegisteredLanding = (By.CLASS_NAME, "inventory_item")
     msgError = (By.CSS_SELECTOR, ".error-message-container h3")
+    logout_page = (By.ID, "logout_sidebar_link")
 
     ####  PARAR EL INVENTARIO
 
@@ -26,11 +27,14 @@ class Register:
     ####### PARA EL CARRITO
 
     inventory_item = (By.CLASS_NAME, "inventory_item")
+  #  inventory_item_name = (By.CLASS_NAME, "inventory_item_name")
     inventory_add_button = (By.TAG_NAME, "button")
     inventory_add_to_cart_button = (By.CLASS_NAME, "btn_inventory")
     carrito_icono = (By.CLASS_NAME, "shopping_cart_badge")
     carrito_add_item = (By.CLASS_NAME, "shopping_cart_link")
-
+    carrito_item = (By.CLASS_NAME, "cart_item")
+    carrito_reset = (By.ID, "reset_sidebar_link")
+    carrito_menu = (By.ID, "react-burger-menu-btn")
 
     #################  Archivo de usuarios para login
 
