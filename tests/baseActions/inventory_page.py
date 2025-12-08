@@ -36,6 +36,7 @@ class InventoryPage:
 
 
     def vaciar_elementos_carrito(self):
-        self.wait.until(EC.element_to_be_clickable(self.Register.carrito_menu)).click()
+        #self.wait.until(EC.element_to_be_clickable(self.Register.carrito_menu)).click()
+        self.wait.until(EC.element_to_be_clickable(self.Register.inventory_menu_carrito)).click()
         self.wait.until(EC.element_to_be_clickable(self.Register.carrito_reset)).click()
         # time.sleep(2)

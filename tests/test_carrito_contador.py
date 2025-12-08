@@ -28,12 +28,16 @@ def test_carrito_contador(driver):
         assert badge == '1' , logger.error("No se incrementa el contador del carrito")
         logger.info(f"En el carrito hay {badge} producto")
 
-
-        # Abrimos el menu, buscamos el botón reset y hacemos click.
-        # Esto es para resetear el carrito en caso que se necesite hacer otras pruebas
-        driver.find_element(*Register.carrito_menu).click()
-        if usuario.se_muestra(Register.carrito_reset):
-            driver.find_element(*Register.carrito_reset).click()
+        # Abrimos el menu, buscamos el botón reset y hacemos clic.
+        # Esto es para resetear el carrito en caso de que se necesite hacer otras pruebas
+        if usuario.es_activo(Register.inventory_menu_carrito):
+            usuario.click_elemento(Register.inventory_menu_carrito)
+            logger.info("Haciendo click en en menu")
+            #driver.find_element(*Register.carrito_meu).click()
+        if usuario.es_activo(Register.inventory_menu_reset):
+            usuario.click_elemento(Register.inventory_menu_reset)
+            #driver.find_element(*Register.carrito_reset).click()
+            logger.info("Haciendo click en el reset")
         else:
             logger.error("No se puedo borrar los elementos el carrito")
             usuario.logout_user() # Salimos de la página para no dejar basura en el carrito.

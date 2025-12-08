@@ -22,6 +22,8 @@ class Register:
     inventory_price = (By.CLASS_NAME, "inventory_item_price")
     inventory_menu = (By.CLASS_NAME, "bm-menu")
     inventory_filter = (By.CLASS_NAME, "product_sort_container")
+    inventory_menu_carrito = (By.ID, "react-burger-menu-btn")          # abre el menu del carrito
+    inventory_menu_reset = (By.ID, "reset_sidebar_link")               # resetea el carrito de compras
 
 
     ####### PARA EL CARRITO
