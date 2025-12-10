@@ -45,3 +45,5 @@ if cantidad_argumentos > 1:
 
 # Argumentos para ejecutar las pruebas: archivos + MARKS + reporte + opciones
 pytest.main(test_files + opciones)
+
+#pytest.main("tests",  opciones)

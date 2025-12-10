@@ -20,6 +20,13 @@ def driver():
     opciones = Options()
     opciones.add_argument("--incognito")
 
+    #########################   Para GitHub   #####################
+    opciones.add_argument("--no-sandbox")  #  github
+    opciones.add_argument("--disable=gpu")
+    opciones.add_argument("--widow-size=1920,1080")
+    opciones.add_argument("--headless=new")   # github
+    ###############################################################
+
     driver = webdriver.Chrome(options=opciones)
     yield driver
     driver.quit()
