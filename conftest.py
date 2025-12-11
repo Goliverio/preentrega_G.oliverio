@@ -23,7 +23,7 @@ def driver():
     #######################   Para GitHub   #####################
     opciones.add_argument("--no-sandbox")  #  github
     opciones.add_argument("--disable-gpu")
-    opciones.add_argument("--window-size=1920,1080")
+    #opciones.add_argument("--window-size=1920,1080")
     opciones.add_argument("--headless=new")   # github
 
     #############################################################
