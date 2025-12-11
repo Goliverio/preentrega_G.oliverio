@@ -1,19 +1,19 @@
-name: CI EntregaOliverio
+name: CI Ejecución de todos los tests
 on:
   push:
-    branches: [develop, master]
+    branches: [master, main,develop]
   pull_request:
-    branches: [develop, master]
+    branches: [master, main,develop]
 jobs:
   test:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     env:
       PYTHON_VERSION: '3.12'
       PIP_CACHE: ~/.cache/pip
 
     steps:
       #1 Checkout
-      - name: Checkout código
+      - name: Checkout codigo
         uses: actions/checkout@v4
 
       #2 Cache de pip
@@ -29,24 +29,23 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      #4 Instalación de dependencias
-      - name: Instalar dependence
+      #4 Instalar dependencias
+      - name: Instalar dependencias
         run: pip install -r requirements.txt
 
-      #5 Ejecutar Tests
-      - name: Run Tests
-        run: python3 run_test.py
+      #5 Ejecutar Test
+      - name: Run test
+        run: python3 run_tests.py
 
-      #6 Generar reportes (artefactos)
+      #6 Subir artefactos (reporte + imagenes + logs)
       - name: Subir HTML report
         uses: actions/upload-artifact@v4
         with:
           name: html-report
           path: reports/
 
-      - name: Subir archivo de logs
+      - name: Subir Suite logs
         uses: actions/upload-artifact@v4
         with:
-          name: suite.log
+          name: suite-log
           path: reports/
-
