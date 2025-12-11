@@ -37,7 +37,7 @@ jobs:
       - name: Run Tests
         run: python3 run_test.py
 
-      #6 Generar reportes (artefactoss)
+      #6 Generar reportes (artefactos)
       - name: Subir HTML report
         uses: actions/upload-artifact@v4
         with:
