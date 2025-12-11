@@ -26,7 +26,7 @@ def driver():
     #opciones.add_argument("--window-size=1920,1080")
     opciones.add_argument("--headless=new")   # github
 
-    #############################################################
+    ############################################################
 
     driver = webdriver.Chrome(options=opciones)
     yield driver
