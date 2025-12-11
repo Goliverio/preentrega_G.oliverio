@@ -22,9 +22,10 @@ def driver():
 
     #########################   Para GitHub   #####################
     opciones.add_argument("--no-sandbox")  #  github
-    opciones.add_argument("--disable=gpu")
-    opciones.add_argument("--widow-size=1920,1080")
+    opciones.add_argument("--disable-gpu")
+    opciones.add_argument("--window-size=1920,1080")
     opciones.add_argument("--headless=new")   # github
+
     ###############################################################
 
     driver = webdriver.Chrome(options=opciones)
@@ -67,7 +68,7 @@ def pytest_runtest_makereport(item, call ):
 
             if driver:
                 # Crea un nombre de archivo único con la hora y el nombre de la prueba
-                timestamp = time.strftime("%Y-%m-%d-%H:%M:%S")
+                timestamp = time.strftime("%Y-%m-%d-%H_%M_%S")
                 screenshot_path = target
                 screenshot_filename = f"{item.name}_{timestamp}.png"
                 driver.save_screenshot(f"{screenshot_path}/{screenshot_filename}")
