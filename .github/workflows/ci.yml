@@ -1,9 +1,9 @@
 name: CI EntregaOliverio
 on:
   push:
-    branches: [main,develop]
+    branches: [main,develop, master]
   pull_request:
-    branches: [main,develop]
+    branches: [main,develop, master]
 jobs:
   test:
     runs-on: ubuntu-lastest
